@@ -10,8 +10,7 @@ function addToCart(productName, price, imageUrl) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.push({ productName, price, image: imageUrl });
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${productName} har lagts till i varukorgen!`);
-    updateCartCount();
+    updateCartCount(); // Uppdatera siffran på varukorgen
 }
 
 // Kör när sidan laddas
