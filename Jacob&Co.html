@@ -73,6 +73,39 @@
         .button:hover {
             background-color: #a07a60;
         }
+        .timeline {
+            background-color: #2a2a2a;
+            color: #f0e6d2;
+            padding: 50px 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: center;
+        }
+        .timeline h2 {
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .timeline-item {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .timeline-item h3 {
+            margin: 0 0 10px;
+            font-size: 22px;
+            color: #c0a080;
+        }
+        .timeline-item p {
+            margin: 0;
+            font-size: 16px;
+        }
     </style>
     <script>
         // Funktion för att uppdatera kundvagnsantalet
@@ -124,5 +157,27 @@
         <h2>Pris: 3 000 000 SEK</h2>
         <button class="button" onclick="addToCart('Jacob & Co', 3000000, 'img/Jacob&Co projekt.webp')">Köp nu</button>
     </main>
+
+    <section class="timeline">
+        <h2>Jacob & Co:s Historia</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <h3>1986</h3>
+                <p>Jacob Arabo grundade Jacob & Co i New York, med fokus på unika smycken och klockor.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2002</h3>
+                <p>Lanserade den ikoniska "Five Time Zone"-klockan, som blev en favorit bland kändisar.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2013</h3>
+                <p>Introducerade Astronomia-kollektionen, en teknisk och konstnärlig prestation inom klocktillverkning.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2025</h3>
+                <p>Fortsätter att skapa innovativa och lyxiga klockor som kombinerar konst och teknik.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

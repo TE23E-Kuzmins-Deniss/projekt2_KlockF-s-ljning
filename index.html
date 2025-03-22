@@ -14,9 +14,9 @@
             <ul class="nav-links">
                 <li><a href="patek-philipe.html">Patek Philippe</a></li>
                 <li><a href="rolex.html">Rolex</a></li>
-                <li><a href="#">Omega</a></li>
-                <li><a href="#">Jacob & CO</a></li>
-                <li><a href="#">Find your Watch</a></li>
+                <li><a href="Omega Speedmaster.html">Omega</a></li>
+                <li><a href="Jacob&Co.html">Jacob & CO</a></li>
+                <li><a href="Audemars Piguet.html">Audemars Piguet</a></li>
             </ul>
             <div class="hamburger-menu" onclick="toggleMenu()">
                 <div class="bar"></div>
@@ -76,10 +76,69 @@
             <a href="Richard Mile.html">
                 <img src="img/Richard Mile projekt.webp" alt="Richard Mille">
             </a>
-            <p>Jacob&Co</p>
-            <p>Pris: 3 000 000 SEK</p>
-            <button class="button" onclick="addToCart('Richard Mile', 3000000, 'img/Richard Mile projekt.webp')">Köp nu</button>
+            <p>Richard Mile</p>
+            <p>Pris: 5 000 000 SEK</p>
+            <button class="button" onclick="addToCart('Richard Mile', 5000000, 'img/Richard Mile projekt.webp')">Köp nu</button>
+        </div>
+        <div class="product">
+            <a href="Audemars Piguet.html">
+                <img src="img/Audemars Piguet projekt.webp" alt="Audemars Piguet">
+            </a>
+            <p>Audemars Piguet</p>
+            <p>Pris: 4 426 000 SEK</p>
+            <button class="button" onclick="addToCart('Audemars Piguet', 4426000, 'img/Audemars Piguet projekt.webp')">Köp nu</button>
+        </div>
+        <div class="product">
+            <a href="Vacheron Constantin.html">
+                <img src="img/Vacheron Constantin projekt.webp" alt="Vacheron Constantin">
+            </a>
+            <p>Vacheron Constantin</p>
+            <p>Pris: 520 000 SEK</p>
+            <button class="button" onclick="addToCart('Vacheron Constantin', 520000, 'img/Vacheron Constantin projekt.webp')">Köp nu</button>
+        </div>
+        <div class="product">
+            <a href="A. Lange & Söhne.html">
+                <img src="img/A. Lange & Söhne projekt.webp" alt="A. Lange & Söhne">
+            </a>
+            <p>A. Lange & Söhne</p>
+            <p>Pris: 2 800 000 SEK</p>
+            <button class="button" onclick="addToCart('A. Lange & Söhne', 2800000, 'img/A. Lange & Söhne projekt.webp')">Köp nu</button>
+        </div>
+        <div class="product">
+            <a href="Breguet.html">
+                <img src="img/Breguet projekt.webp" alt="Breguet">
+            </a>
+            <p>A. Lange & Söhne</p>
+            <p>Pris: 3 200 000 SEK</p>
+            <button class="button" onclick="addToCart('Breguet', 3200000, 'img/Breguet projekt.webp')">Köp nu</button>
+        </div>
+        <div class="product">
+            <a href="Bovet.html">
+                <img src="img/Bovet projekt.webp" alt="Bovet">
+            </a>
+            <p>Bovet</p>
+            <p>Pris: 4 700 000 SEK</p>
+            <button class="button" onclick="addToCart('Bovet', 4700000, 'img/Bovet projekt.webp')">Köp nu</button>
         </div>
     </main>
+<!-- Till toppen-knappen -->
+<button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+<script>
+    // Funktion för att scrolla till toppen
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Visa eller dölj "Till toppen"-knappen baserat på scrollposition
+    window.addEventListener('scroll', () => {
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'flex';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>

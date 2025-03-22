@@ -1,4 +1,5 @@
-html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,6 +73,39 @@ html lang="en">
         .button:hover {
             background-color: #a07a60;
         }
+        .timeline {
+            background-color: #2a2a2a;
+            color: #f0e6d2;
+            padding: 50px 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: center;
+        }
+        .timeline h2 {
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .timeline-item {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .timeline-item h3 {
+            margin: 0 0 10px;
+            font-size: 22px;
+            color: #c0a080;
+        }
+        .timeline-item p {
+            margin: 0;
+            font-size: 16px;
+        }
     </style>
     <script>
         // Funktion för att uppdatera kundvagnsantalet
@@ -123,5 +157,27 @@ html lang="en">
         <h2>Pris: 105 000 SEK</h2>
         <button class="button" onclick="addToCart('Omega Speedmaster', 105000, 'img/Omega_speedmaster projekt.webp')">Köp nu</button>
     </main>
+
+    <section class="timeline">
+        <h2>Omega Speedmasters Historia</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <h3>1957</h3>
+                <p>Lanserades som en del av Omega's "Professional" kollektion, designad för motorsport.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1969</h3>
+                <p>Blev den första klockan som bars på månen under Apollo 11-uppdraget.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1998</h3>
+                <p>Introducerade nya modeller med förbättrad hållbarhet och precision.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2025</h3>
+                <p>Fortsätter att vara en symbol för innovation och utforskning.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
