@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob & Co</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #c0a080;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2a2a2a;
+            padding: 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: #c0a080;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cart {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .cart-icon {
+            font-size: 24px;
+        }
+        .cart-count {
+            background-color: #c0392b;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .product-detail {
+            text-align: center;
+            padding: 50px;
+        }
+        .product-detail img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #c0a080;
+            color: #121212;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #a07a60;
+        }
+    </style>
+    <script>
+        // Funktion för att uppdatera kundvagnsantalet
+        function updateCartCount() {
+            const cartCount = document.querySelector('.cart-count');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cartCount.textContent = cart.length;
+        }
+
+        // Funktion för att lägga till produkter i varukorgen
+        function addToCart(productName, price, imageUrl) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ productName, price, image: imageUrl });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} har lagts till i varukorgen!`);
+            updateCartCount(); // Uppdatera siffran på varukorgen
+        }
+
+        // Kör när sidan laddas
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">LUXURY WATCHES</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="cart.html" class="cart-link">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+    
+    <main class="product-detail">
+        <img src="img/Jacob&Co projekt.webp" alt="Jacob & Co">
+        <h1>Jacob & Co</h1>
+        <p>Jacob & Co är kända för sina unika och lyxiga klockor som kombinerar konst och teknik på ett fantastiskt sätt.</p>
+        <ul>
+            <li>Material: 18K Guld</li>
+            <li>Urverk: Automatiskt</li>
+            <li>Vattentålig: 30m</li>
+            <li>Diameter: 44mm</li>
+        </ul>
+        <h2>Pris: 3 000 000 SEK</h2>
+        <button class="button" onclick="addToCart('Jacob & Co', 3000000, 'img/Jacob&Co projekt.webp')">Köp nu</button>
+    </main>
+</body>
+</html>
