@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Watches</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">LUAXARY WATCHES</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="patek-philipe.html">Patek Philippe</a></li>
+                <li><a href="#">Rolex</a></li>
+                <li><a href="#">Omega</a></li>
+                <li><a href="#">Jacob & CO</a></li>
+                <li><a href="#">Find your Watch</a></li>
+            </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="product-container">
+        <section class="unique-product">
+            <img src="img/Wathes Mechanism.webp" alt="Unique Product">
+            <h2>Exclusive Limited Edition</h2>
+            <p>Only a few left in stock!</p>
+            <a href="exclusive-limited-edition.html" class="button">View Details</a>
+        </section>
+        <div class="product">
+            <a href="patek-philipe.html">
+                <img src="img/Patek Philipe.webp" alt="Patek Philippe">
+            </a>
+            <p>Patek Philippe</p>
+            <p>Pris: 2 500 000 SEK</p>
+            <button class="button" onclick="addToCart('Patek Philippe', 2500000, 'img/Patek Philipe.webp')">Köp nu</button>
+        </div>
+    </main>
+</body>
+</html>
