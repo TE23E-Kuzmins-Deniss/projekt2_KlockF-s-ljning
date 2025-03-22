@@ -150,3 +150,74 @@ a.button:active {
     background-color: #555;
     transform: scale(0.95);
 }
+
+/* Responsiv design */
+@media (max-width: 1024px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .unique-product {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+    .unique-product {
+        grid-column: span 1;
+    }
+}
+
+/* Hamburgermeny */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 10;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #c0a080;
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #2a2a2a;
+        padding: 20px;
+        width: 200px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2a2a2a;
+    color: #fff;
+    margin-top: 20px;
+}
